@@ -1,0 +1,96 @@
+.trailer-maintitle {
+    font-size: 1.5em;
+}
+
+.trailer-overview {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.trailer-one {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.trailer-overview-container .img{
+    width: 10%;
+    background-repeat: no-repeat;
+}
+
+.body {
+    padding-left: 20px;
+}
+
+.trailer-recent {
+    display: flex;
+}
+
+.trailer-image {
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: 17px 26px 44px -16px rgba(0,0,0,0.51);
+}
+
+.trailer-title {
+    padding-left: 25px;
+}
+
+.trailer-title h3 {
+    color: lightgrey;
+    margin-top: -15px;
+}
+
+.trailer-categorys-title {
+    margin-top: 30px;
+}
+
+.trailer-categorys {
+    display: flex;
+    max-height: 120px;
+    overflow-x: auto;
+}
+
+.trailer-categorys::-webkit-scrollbar{
+    width: 0;
+}
+
+.trailer-categorys .trailer-array {
+    min-width: 73px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #1C1A1F;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.trailer-list {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.trailer-list-image {
+    width: 35%;
+    border-radius: 20px;
+    box-shadow: 17px 26px 44px -16px rgba(0,0,0,0.51);
+}
+
+.trailer-list-title {
+    padding-left: 25px;
+}
+
+.trailer-list-title h3 {
+    color: lightgrey;
+    margin-top: -15px;
+}
