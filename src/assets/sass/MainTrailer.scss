@@ -1,3 +1,7 @@
+.trailer-menu {
+    padding-left: 20px;
+}
+
 .trailer-maintitle {
     font-size: 1.5em;
 }
@@ -25,10 +29,6 @@
 .trailer-overview-container .img{
     width: 10%;
     background-repeat: no-repeat;
-}
-
-.body {
-    padding-left: 20px;
 }
 
 .trailer-recent {
@@ -93,4 +93,9 @@
 .trailer-list-title h3 {
     color: lightgrey;
     margin-top: -15px;
+}
+
+.trailer-dialog {
+    position: fixed;
+    display: none;
 }
