@@ -1,10 +1,16 @@
 <template>
     <div class="body">
+        <div class="testDialog">
+            <div v-for="item in trailerDialog" :key="item.id">
+                <h1>{{ item }}</h1>
+            </div>
+        </div>
+
         <div class="trailer-maintitle">
             <h1>Trending Trailer</h1>
         </div>
-        <div @click="$store.commit('view', TRAILER_HEAD)" v-for="trailer in list" :key="trailer.id">
-            <div class="trailer-recent">
+        <div v-for="trailer in list" :key="trailer.id">
+            <div class="trailer-recent" @click="$store.commit('view', TRAILER_HEAD)">
                 <img class="trailer-image" :src="trailer.image" />
                 <div class="trailer-title">
                     <h1>{{ trailer.name }}</h1>
@@ -23,7 +29,7 @@
         </div>
 
         <div v-for="trailerlist in trailers" :key="trailerlist.id">
-            <div @click="$store.commit('view', trailerlist.link)" class="trailer-list">
+            <div @click="openTrailer(trailerlist)" class="trailer-list">
                 <img class="trailer-list-image" :src="trailerlist.image">
                 <div class="trailer-list-title">
                     <h2>{{ trailerlist.name }}</h2>
@@ -37,8 +43,6 @@
 </template>
 
 <script>
-import { TRAILER_HEAD, TRAILER_ONE, TRAILER_TWO } from '../App';
-
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -47,10 +51,8 @@ Vue.use(VueAxios, axios)
 export default {
     data() {
         return {
-            TRAILER_HEAD,
-            TRAILER_ONE,
-            TRAILER_TWO,
             maintrailers: [],
+            trailerDialog: [],
             list: undefined,
             categorys: undefined,
             trailers: undefined,
@@ -72,6 +74,12 @@ export default {
                 this.trailers = resp.data.traileroftheweek;
             })
     },
+    methods: {
+        openTrailer(trailerlist) {
+            this.trailerDialog = trailerlist;
+
+        },
+    }
 }
 
 </script>
