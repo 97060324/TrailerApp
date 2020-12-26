@@ -20,38 +20,36 @@
 .TrailerHead-infobox {
     position: fixed;
     background-color: #0b0b0b;
-    border-radius: 50px 50px 0 0;
+    border-radius: 40px 40px 0 0;
 
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     width: 100%;
 
     h1 {
-        padding-left: 50px;
+        padding-left: 33px;
     }
 
     h3 {
         margin-top: -20px;
         opacity: 0.6;
-        padding-left: 50px;
+        padding-left: 33px;
     }
 
     p {
-        padding-left: 50px;
+        padding-left: 33px;
     }
 
     button {
-        margin: 0 auto;
         background-color: #E11A37;
-        border: 0;
+        border: 10px;
         font-size: 1.3em;
         padding: 15px;
 
         border-radius: 10px;
-    }
-}
 
-.trailer-button {
-    text-align: center;
-    padding-left: 20px;
+        margin-left: 33px;
+
+        margin-bottom: 15px;
+    }
 }
