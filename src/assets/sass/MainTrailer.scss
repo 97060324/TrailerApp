@@ -1,9 +1,10 @@
-.trailer-menu {
-    padding-left: 20px;
-}
+.trailer-app {
+    margin: 0 auto;
+    width: 70%;
 
-.trailer-maintitle {
-    font-size: 1.5em;
+    @media (max-width: 700px) {
+        width: 90%;;
+    }
 }
 
 .trailer-overview {
@@ -16,83 +17,58 @@
     width: 100%;
 }
 
-.trailer-one {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-}
-
-.trailer-overview-container .img{
-    width: 10%;
-    background-repeat: no-repeat;
-}
-
-.trailer-recent {
+.trailer-main {
     display: flex;
+
+    img {
+        width: 50%;
+        max-width: 300px;
+        border-radius: 20px;
+        box-shadow: 17px 26px 44px -16px rgba(0,0,0,0.51);
+    }
+
+    h1 {
+        padding-left: 25px;
+    }
+
+    h3 {
+        padding-left: 25px;
+        color: lightgrey;
+        margin-top: -15px;
+    }
 }
 
-.trailer-image {
-    width: 50%;
-    border-radius: 20px;
-    box-shadow: 17px 26px 44px -16px rgba(0,0,0,0.51);
+.trailer-search {
+    input {
+        width: 60%;
+        padding: 10px;
+        color: #333333;
+        border-radius: 0.5rem;
+    }
 }
 
-.trailer-title {
-    padding-left: 25px;
-}
-
-.trailer-title h3 {
-    color: lightgrey;
-    margin-top: -15px;
-}
-
-.trailer-categorys-title {
-    margin-top: 30px;
-}
-
-.trailer-categorys {
-    display: flex;
-    max-height: 120px;
-    overflow-x: auto;
-}
-
-.trailer-categorys::-webkit-scrollbar{
-    width: 0;
-}
-
-.trailer-categorys .trailer-array {
-    min-width: 73px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    background-color: #1C1A1F;
-    margin-right: 15px;
-    border-radius: 5px;
+.trailer-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+    grid-gap: 0;
 }
 
 .trailer-list {
-    display: flex;
     margin-top: 30px;
     margin-bottom: 30px;
-}
 
-.trailer-list-image {
-    width: 35%;
-    border-radius: 20px;
-    box-shadow: 17px 26px 44px -16px rgba(0,0,0,0.51);
-}
+    img {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 20px;
+        box-shadow: 17px 26px 44px -16px rgba(0,0,0,0.51);
+    }
 
-.trailer-list-title {
-    padding-left: 25px;
-}
+    h3 {
 
-.trailer-list-title h3 {
-    color: lightgrey;
-    margin-top: -15px;
+        color: lightgrey;
+        margin-top: -15px;
+    }
 }
 
 .trailer-dialog {

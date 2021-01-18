@@ -1,0 +1,68 @@
+$spacing: 3em;
+$padding: $spacing / 2;
+$margin: $spacing / 2;
+
+$duration-short: .2s;
+$duration-medium: $duration-short * 2;
+$duration-medium: $duration-medium * 2;
+
+$font-size: 18px;
+$line-height: 1.4321;
+
+$border-radius: $spacing / 8;
+
+// colors
+$color-text: #333;
+$color-background: #FBFAFB;
+
+$color-red: rgb(237, 32, 36);
+$color-red-dark: darken(rgb(219, 36, 40), 5%);
+$color-red-bright: rgb(251, 201, 180);
+$color-yellow: rgb(255, 194, 13);
+$color-yellow-dark: darken(rgb(230, 173, 35), 2%);
+$color-yellow-bright: rgb(255, 236, 197);
+$color-green: rgb(140, 198, 63);
+$color-green-dark: rgb(131, 180, 65);
+$color-green-bright: rgb(224, 237, 203);
+$color-turqoise: rgb(0, 167, 118);
+$color-turqoise-dark: darken(rgb(0, 155, 109), 1%);
+$color-turqoise-bright: rgb(190, 227, 213);
+$color-lightblue: rgb(0, 173, 238);
+$color-lightblue-dark: darken(rgb(0, 159, 210), 3%);
+$color-lightblue-bright: rgb(185, 229, 251);
+$color-blue: lighten(rgb(0, 84, 166), 8%);
+$color-blue-dark: lighten(rgb(3, 81, 152), 5%);
+$color-blue-bright: lighten(rgb(186, 194, 227), 8%);
+$color-purple: lighten(rgb(145, 39, 143), 7%);
+$color-purple-dark: lighten(rgb(139, 40, 133), 3%);
+$color-purple-bright: rgb(217, 192, 221);
+$color-magenta: lighten(rgb(237, 9, 114), 3%);
+$color-magenta-dark: darken(rgb(218, 23, 108), 1%);
+$color-magenta-bright: rgb(250, 202, 210);
+
+$color-primary: #428BCA;
+$color-primary-text: $color-background;
+
+$color-info: #1D8FA1;
+$color-info-text: $color-background;
+$color-success: #96bb7c;
+$color-success-text: $color-background;
+$color-error: #f57b51;
+$color-error-text: $color-background;
+
+$color-nav-background: $color-text;
+$color-nav-active-background: $color-yellow;
+$color-particle: $color-info;
+
+$breakpoint-nav-logo: 650px;
+$max-container-width: 60rem;
+
+$header-padding: $padding / 2;
+$header-height: $header-padding * 2 + 1/* 1 line height (its set to 1) */ * 1em;
+
+$overlay-sign-max-size: 250px;
+$menu-width: 20em;
+
+$load-drawing-image-size: 13em;
+$load-drawing-border-radius: $border-radius;
+$box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 8px 20px 0 rgba(0, 0, 0, 0.06);
