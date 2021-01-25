@@ -41,23 +41,25 @@
 
             <div class="trailer-search">
                 <h1>Search</h1>
-                <input v-model="search" placeholder="Search your favourite trailer..." type="text" autocomplete="false">
+                <input placeholder="Search your favourite trailer..." type="text" v-model="search" autocomplete="false">
             </div>
 
-            <ul class="trailer-items">
-                <li v-for="trailerlist in trailers" class="trailer-list">
-                    <figure @click="openTrailer(trailerlist)">
-                        <img :src="trailerlist.image">
+            <div class="trailer-list-item">
+                <ul class="trailer-items">
+                    <li v-for="trailerlist in filteredList" class="trailer-list">
+                        <figure @click="openTrailer(trailerlist)">
+                            <img :src="trailerlist.image">
 
-                        <figcaption>
-                            <h2>{{ trailerlist.name }}</h2>
-                            <h3>{{ trailerlist.year }}</h3>
-                            <h3>{{ trailerlist.rating }}</h3>
-                            <h3>{{ trailerlist.category }}</h3>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
+                            <figcaption>
+                                <h2>{{ trailerlist.name }}</h2>
+                                <h3>{{ trailerlist.year }}</h3>
+                                <h3>{{ trailerlist.rating }}</h3>
+                                <h3>{{ trailerlist.category }}</h3>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -76,12 +78,12 @@ export default {
             category: [],
             list: undefined,
             categorys: undefined,
-            trailers: undefined,
+            trailers: [],
             action: undefined,
-
             search: '',
         }
     },
+    //Later this in a new file Like API.JS
     mounted() {
         Vue.axios.get('https://api.npoint.io/8f1508e4c976b0fdafbf') // MainTrailer API
             .then((resp) => {
@@ -103,6 +105,13 @@ export default {
                 this.action = resp.data.action;
             })
     },
+    computed: {
+        filteredList() {
+            return this.trailers.filter(traileroftheweek => {
+                return traileroftheweek.name.toLowerCase().includes(this.search.toLowerCase())
+            })
+        }
+    },
     methods: {
         openTrailer(trailerlist) {
             this.trailerDialog = trailerlist;
@@ -114,20 +123,6 @@ export default {
             document.getElementsByClassName('trailer-dialog')[0].style.display = 'none';
             document.getElementsByClassName('trailer-menu')[0].style.display = 'block';
         },
-        openCategory(category) {
-            this.category = category;
-
-            console.log(category.title);
-            console.log(this.trailers);
-
-            document.getElementsByClassName('category-dialog')[0].style.display = 'block';
-            document.getElementsByClassName('trailer-menu')[0].style.display = 'none';
-        },
-        closeCategory() {
-            document.getElementsByClassName('category-dialog')[0].style.display = 'none';
-            document.getElementsByClassName('trailer-menu')[0].style.display = 'block';
-        }
-
     }
 }
 
