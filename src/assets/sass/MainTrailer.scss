@@ -67,16 +67,27 @@ $padding: $spacing / 2;
     grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
     grid-gap: 0;
 
+
     margin: ($padding / 2) (-$padding / 2);
 
     &::after {
         content: '';
     }
+
+    @media (max-width: 480px) {
+        figure {
+            display: flex;
+
+            figcaption {
+                padding-left: 20px;
+            }
+        }
+    }
 }
 
 .trailer-list {
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: -30px;
 
     img {
         width: 100%;
